@@ -111,16 +111,16 @@ Page
 ======================================================================================
 */
 
-.front #page {
-	background:url('../images/paulknakkcompressed.jpg');
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position: center;
+.front #header-wrapper {
+	background: url("../images/paulknakkcompressed.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 1200px;
 }
 
 
-#page {
-	
+body {
 	width: 100vw;
     height: 100vh;
 }
@@ -132,15 +132,45 @@ Header
 ======================================================================================
 */
 
-#header {
+#header-wrapper {
 	font-family: 'BioRhyme', serif;
-	width:100%;
-	height:60px;
-	position: fixed;
 
-	#name-and-slogan {
-		color: $brown;
+	#header {
+		width:100%;
+		height:60px;
+		position: fixed;
+
+		#name-and-slogan {
+			position:absolute;
+			top:5px;
+			left:50%;
+			-moz-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			transform: translateX(-50%);
+			text-align:center;
+
+			#site-name {
+				font-size:58px;
+				font-weight: 700;
+				text-transform: uppercase;
+
+				a {
+					color:$red;
+					text-decoration:none;
+				}
+
+			}	
+
+		}
+
+	}
+
+	#site-slogan {
+	color: $brown;
 		position:absolute;
+		top:70px;
 		left:50%;
 		-moz-transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
@@ -148,22 +178,10 @@ Header
 		-ms-transform: translateX(-50%);
 		transform: translateX(-50%);
 		text-align:center;
-
-		#site-name {
-			font-size:50px;
-			font-weight: 700;
-			text-transform: uppercase;
-
-			a {
-				color:$red;
-				text-decoration:none;
-			}
-
-		}	
-
 	}
-
 }
+
+
 
 /*
 ======================================================================================
@@ -171,24 +189,116 @@ Menu
 ======================================================================================
 */
 
-#block-system-main-menu {
-	padding:20px 0 0 20px;
+.region-header {
+	position:absolute;
+	top:20px;
+	left:20px;
+
 	.menu {
 
 		.leaf {
+			font-size:18px;
 			display:inline-block;
-			padding:0 5px;
 
 			a {
 				text-decoration: none;
 				color: $red;
+				padding: 6px 5px 6px 0px;
+				box-sizing:border-box;
+				display: block;
+				border-left: 5px solid transparent;
+				-webkit-transition: all 300ms ease;
+				-moz-transition: all 300ms ease;
+				-ms-transition: all 300ms ease;
+				-o-transition: all 300ms ease;
+				transition: all 300ms ease;
+
+
+				&:hover {
+					color: $gold;
+					background-color: $brown;
+					border-left: 5px solid $gold;
+					padding:6px 12px;
+				}
+
 			}
 		}
 	}
 }
 
+/*
+======================================================================================
+Spotify/Youtube Blocks
+======================================================================================
+*/
 
 
+
+.region-content {
+	width:100%;
+	height:500px;
+
+
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	.embedblock {
+		font-family: 'BioRhyme', serif;
+		color:$gold;
+		width:50%;
+		float:left;
+		text-align:center;
+		height:500px;
+		
+		.content {
+			display:table;
+			height:500px;
+			margin: 0 auto;
+
+			.blockcontainer {
+				display: table-cell;
+				vertical-align: middle;
+
+				h2 {
+					text-align:left;
+					font-size:22px;
+					padding:0px 0px 20px;
+					text-transform: uppercase;
+				}
+			}
+		}	
+
+
+
+	}
+
+	.spotifyblock {
+		background: linear-gradient(rgba(122,47,62, 0.75), rgba(122,47,62, 0.75)), url("../images/paulblock1.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position:center;
+	}
+
+	.youtubeblock {
+		background: linear-gradient(rgba(49,74,85, 0.75), rgba(49,74,85, 0.75)), url("../images/paulblock2.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position:center;
+	}
+
+	iframe {
+		-webkit-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+		-moz-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+		box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+	}
+
+}
 
 
 

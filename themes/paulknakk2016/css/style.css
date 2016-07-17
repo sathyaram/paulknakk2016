@@ -113,14 +113,16 @@ Page
 ======================================================================================
 */
 /* line 114, ../sass/style.scss */
-.front #page {
+.front #header-wrapper {
   background: url("../images/paulknakkcompressed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top center;
+  height: 1200px;
 }
 
-/* line 121, ../sass/style.scss */
-#page {
+/* line 123, ../sass/style.scss */
+body {
   width: 100vw;
   height: 100vh;
 }
@@ -130,17 +132,20 @@ Page
 Header
 ======================================================================================
 */
-/* line 134, ../sass/style.scss */
-#header {
+/* line 135, ../sass/style.scss */
+#header-wrapper {
   font-family: 'BioRhyme', serif;
+}
+/* line 138, ../sass/style.scss */
+#header-wrapper #header {
   width: 100%;
   height: 60px;
   position: fixed;
 }
-/* line 140, ../sass/style.scss */
-#header #name-and-slogan {
-  color: #835932;
+/* line 143, ../sass/style.scss */
+#header-wrapper #header #name-and-slogan {
   position: absolute;
+  top: 5px;
   left: 50%;
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -149,16 +154,29 @@ Header
   transform: translateX(-50%);
   text-align: center;
 }
-/* line 151, ../sass/style.scss */
-#header #name-and-slogan #site-name {
-  font-size: 50px;
+/* line 154, ../sass/style.scss */
+#header-wrapper #header #name-and-slogan #site-name {
+  font-size: 58px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 156, ../sass/style.scss */
-#header #name-and-slogan #site-name a {
+/* line 159, ../sass/style.scss */
+#header-wrapper #header #name-and-slogan #site-name a {
   color: #973141;
   text-decoration: none;
+}
+/* line 170, ../sass/style.scss */
+#header-wrapper #site-slogan {
+  color: #835932;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 /*
@@ -166,17 +184,102 @@ Header
 Menu
 ======================================================================================
 */
-/* line 173, ../sass/style.scss */
-#block-system-main-menu {
-  padding: 20px 0 0 20px;
+/* line 192, ../sass/style.scss */
+.region-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
-/* line 177, ../sass/style.scss */
-#block-system-main-menu .menu .leaf {
+/* line 199, ../sass/style.scss */
+.region-header .menu .leaf {
+  font-size: 18px;
   display: inline-block;
-  padding: 0 5px;
 }
-/* line 181, ../sass/style.scss */
-#block-system-main-menu .menu .leaf a {
+/* line 203, ../sass/style.scss */
+.region-header .menu .leaf a {
   text-decoration: none;
   color: #973141;
+  padding: 6px 5px 6px 0px;
+  box-sizing: border-box;
+  display: block;
+  border-left: 5px solid transparent;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+/* line 217, ../sass/style.scss */
+.region-header .menu .leaf a:hover {
+  color: #ffebac;
+  background-color: #835932;
+  border-left: 5px solid #ffebac;
+  padding: 6px 12px;
+}
+
+/*
+======================================================================================
+Spotify/Youtube Blocks
+======================================================================================
+*/
+/* line 237, ../sass/style.scss */
+.region-content {
+  width: 100%;
+  height: 500px;
+}
+/* line 242, ../sass/style.scss */
+.region-content:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 251, ../sass/style.scss */
+.region-content .embedblock {
+  font-family: 'BioRhyme', serif;
+  color: #ffebac;
+  width: 50%;
+  float: left;
+  text-align: center;
+  height: 500px;
+}
+/* line 259, ../sass/style.scss */
+.region-content .embedblock .content {
+  display: table;
+  height: 500px;
+  margin: 0 auto;
+}
+/* line 264, ../sass/style.scss */
+.region-content .embedblock .content .blockcontainer {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 268, ../sass/style.scss */
+.region-content .embedblock .content .blockcontainer h2 {
+  text-align: left;
+  font-size: 22px;
+  padding: 0px 0px 20px;
+  text-transform: uppercase;
+}
+/* line 281, ../sass/style.scss */
+.region-content .spotifyblock {
+  background: linear-gradient(rgba(122, 47, 62, 0.75), rgba(122, 47, 62, 0.75)), url("../images/paulblock1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* line 288, ../sass/style.scss */
+.region-content .youtubeblock {
+  background: linear-gradient(rgba(49, 74, 85, 0.75), rgba(49, 74, 85, 0.75)), url("../images/paulblock2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* line 295, ../sass/style.scss */
+.region-content iframe {
+  -webkit-box-shadow: 0px 5px 27px 0px black;
+  -moz-box-shadow: 0px 5px 27px 0px black;
+  box-shadow: 0px 5px 27px 0px black;
 }
