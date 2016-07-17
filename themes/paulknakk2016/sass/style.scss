@@ -50,13 +50,6 @@ table {
 
 /*
 ======================================================================================
-Miscellaneous
-======================================================================================
-*/
-
-
-/*
-======================================================================================
 Variables
 ======================================================================================
 */
@@ -65,8 +58,32 @@ $white: #ffffff;
 $black: #000000;
 $brown: #835932;
 $gold: #ffebac;
+$lightgold: #fff6d8;
 $red: #973141;
 
+$table-layout: 1100px;
+$phone-layout:600px;
+
+
+
+/*
+======================================================================================
+Miscellaneous
+======================================================================================
+*/
+
+
+a.more-button {
+	text-align: center;
+	display:block;
+	text-decoration: none;
+	background-color:$gold;
+	color:$brown;
+	padding:10px;
+	width:150px;
+	margin:0 auto;
+	font-family: 'BioRhyme', serif;
+}
 
 /*
 ======================================================================================
@@ -236,8 +253,45 @@ Spotify/Youtube Blocks
 
 .region-content {
 	width:100%;
-	height:500px;
+	height: auto;
 
+	h2 {
+		text-align:center;
+		font-size:22px;
+		padding:0px 0px 20px;
+		text-transform: uppercase;
+		font-family: 'BioRhyme', serif;
+		color:$gold;
+		font-weight:700;
+	}
+
+	h3 {
+		font-family: 'BioRhyme', serif;
+		font-weight: 400;
+	    color: $lightgold;
+	    font-size: 16px;
+	    width: 79px;
+	    padding: 0px 30px 0px 0px;
+	    height: 50px;
+	    float: left;
+	    border-right: 3px solid $lightgold;
+
+	    @media screen and (max-width: $phone-layout) {
+	    	border:none;
+	    	float:none;
+	    	width:100%;
+	    	height:auto;
+	    	padding:0px;
+	    }
+
+	}
+
+	h4 {
+		font-family: 'BioRhyme', serif;
+		font-weight:200;
+		font-size:20px;
+
+	}
 
 	&:after {
 		visibility: hidden;
@@ -249,33 +303,44 @@ Spotify/Youtube Blocks
 	}
 
 	.embedblock {
-		font-family: 'BioRhyme', serif;
-		color:$gold;
 		width:50%;
 		float:left;
 		text-align:center;
-		height:500px;
+		height:600px;
+
+		@media screen and (max-width: $table-layout) {
+			width:100%;
+			box-sizing:border-box;
+		}
 		
 		.content {
 			display:table;
-			height:500px;
+			height:600px;
 			margin: 0 auto;
+			width:500px;
+			padding:0px 20px;
+
+			@media screen and (max-width: $phone-layout) {
+				width:100%;
+				box-sizing:border-box;
+			}
 
 			.blockcontainer {
 				display: table-cell;
 				vertical-align: middle;
 
-				h2 {
-					text-align:left;
-					font-size:22px;
-					padding:0px 0px 20px;
-					text-transform: uppercase;
+				iframe {
+					-webkit-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+					-moz-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+					box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+
+					@media screen and (max-width: $table-layout) {
+						width:100%;
+					}
+
 				}
 			}
 		}	
-
-
-
 	}
 
 	.spotifyblock {
@@ -292,18 +357,176 @@ Spotify/Youtube Blocks
 	    background-position:center;
 	}
 
-	iframe {
-		-webkit-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
-		-moz-box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
-		box-shadow: 0px 5px 27px 0px rgba(0,0,0,1);
+	#block-agenda-2 {
+		width:50%;
+		float:left;
+		background-color: $brown;
+		height:600px;
+		background: linear-gradient(rgba(75,49,24, 0.85), rgba(75,49,24, 0.85)), url("../images/paulblock3.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position:center;
+
+	    @media screen and (max-width: $table-layout) {
+			width:100%;
+		}
+
+		.content {
+			display:table;
+			height:600px;
+			margin: 0 auto;
+		}
+
+		.agenda-block {
+			width:500px;
+			margin: 0 auto;
+			display:table-cell;
+			vertical-align: middle;
+
+			@media screen and (max-width: $phone-layout) {
+	    		text-align:center;
+	    	}
+			
+			#tour-block .tour-date:nth-child(4) {
+				border:none;
+
+			}
+			
+
+			.tour-date {
+				color: $lightgold;
+				border-bottom: 1px solid $gold;
+				padding:25px 0;
+				height:95px;
+				box-sizing:border-box;
+
+				@media screen and (max-width: $phone-layout) {
+	    			border:none;
+	    			height:95px;
+	   			}	
+
+				&:after {
+					visibility: hidden;
+					display: block;
+					font-size: 0;
+					content: " ";
+					clear: both;
+					height: 0;
+				}
+
+				ol {
+					width:388px;
+					float:left;
+					padding:0 0 0 30px;
+					box-sizing:border-box;
+
+					@media screen and (max-width: $phone-layout) {
+	    				padding:0px 20px;
+	    				width:100%;
+	    			}
+
+				}
+			}
+		}
+
+		li.cal_0 {
+			background-color: transparent;
+
+			ul.moreinfo {
+				display: block !important;
+
+				li {
+					display:inline-block;
+					font-weight:200;
+					letter-spacing: 1px;
+					padding:0 5px 0 0;
+					
+
+					em {
+						font-weight:400;
+					}
+					
+				}
+
+
+			}
+
+		}
 	}
 
+	#block-views-news-block {
+		width: 50%;
+		float:left;
+		background-color: $brown;
+		height:600px;
+		background: linear-gradient(rgba(182,85,12, 0.85), rgba(182,85,12, 0.85)), url("../images/paulblock4.jpg");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position:top center;
+	    text-align: center;
+
+	    @media screen and (max-width: $table-layout) {
+			width:100%;
+		}
+
+	    .content {
+	    	display:table;
+	    	width:500px;
+			height:600px;
+			margin: 0 auto;
+
+			@media screen and (max-width: $phone-layout) {
+	    		width:100%;
+	    	}
+
+
+			.view-news { 
+				display:table-cell;
+				vertical-align: middle;
+
+				.views-row {
+					padding: 22px 0;
+    				border-bottom: 1px solid #ffebac;
+    				text-align: center;
+
+    				@media screen and (max-width: $phone-layout) {
+    					margin: 0 20px;
+    					padding:16px 0px;
+    				}
+
+    				a {
+    					font-family: 'BioRhyme', serif;
+						font-weight:300;
+						text-decoration: none;
+						color:$lightgold;
+						font-size:22px;
+						-webkit-transition: all 300ms ease;
+						-moz-transition: all 300ms ease;
+						-ms-transition: all 300ms ease;
+						-o-transition: all 300ms ease;
+						transition: all 300ms ease;
+
+
+						&:hover {
+							color:white;
+						}
+    				}
+
+
+
+
+				}
+
+				.views-row:nth-child(4) {
+					border:none;
+				}
+			}
+		}
+	}
+
+	
+
 }
-
-
-
-
-
 
 
 
