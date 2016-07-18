@@ -71,7 +71,7 @@ Variables
 Miscellaneous
 ======================================================================================
 */
-/* line 76, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 a.more-button {
   text-align: center;
   display: block;
@@ -89,13 +89,13 @@ a.more-button {
 Social Media
 ======================================================================================
 */
-/* line 94, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 #social-media-menu {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-/* line 99, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 #social-media-menu .fa {
   width: 22px;
   text-align: center;
@@ -114,7 +114,7 @@ Social Media
   -o-transition: background 300ms ease;
   transition: background 300ms ease;
 }
-/* line 117, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 #social-media-menu .fa:hover {
   background-color: #973141;
   color: #ffebac;
@@ -125,7 +125,7 @@ Social Media
 Page
 ======================================================================================
 */
-/* line 131, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .front #header-wrapper {
   background: url("../images/paulknakkcompressed.jpg");
   background-repeat: no-repeat;
@@ -134,7 +134,7 @@ Page
   height: 1200px;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 body {
   width: 100vw;
   height: 100vh;
@@ -145,17 +145,18 @@ body {
 Header
 ======================================================================================
 */
-/* line 152, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 #header-wrapper {
   font-family: 'BioRhyme', serif;
 }
-/* line 155, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #header-wrapper #header {
   width: 100%;
-  height: 60px;
+  height: 75px;
+  background: rgba(244, 248, 251, 0.8);
   position: fixed;
 }
-/* line 160, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan {
   position: absolute;
   top: 5px;
@@ -167,23 +168,38 @@ Header
   transform: translateX(-50%);
   text-align: center;
 }
-/* line 171, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name {
-  font-size: 58px;
+  font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 176, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name a {
   color: #973141;
   text-decoration: none;
 }
 /* line 187, ../sass/style.scss */
+#header-wrapper #header h2 {
+  font-family: 'Robot', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 12px;
+  color: #835932;
+  text-align: center;
+  padding-left: 9px;
+}
+/* line 201, ../sass/style.scss */
 #header-wrapper #site-slogan {
   color: #835932;
   position: absolute;
-  top: 70px;
+  top: 110px;
+  text-transform: uppercase;
+  font-weight: 100;
   left: 50%;
+  width: 100%;
+  font-size: 34px;
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -o-transform: translateX(-50%);
@@ -197,18 +213,18 @@ Header
 Menu
 ======================================================================================
 */
-/* line 209, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .region-header {
   position: absolute;
   top: 20px;
   left: 20px;
 }
-/* line 216, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .region-header .menu .leaf {
-  font-size: 18px;
+  font-size: 15px;
   display: inline-block;
 }
-/* line 220, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .region-header .menu .leaf a {
   text-decoration: none;
   color: #973141;
@@ -222,7 +238,7 @@ Menu
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 234, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .region-header .menu .leaf a:hover {
   color: #ffebac;
   background-color: #835932;
@@ -235,22 +251,29 @@ Menu
 Spotify/Youtube Blocks
 ======================================================================================
 */
-/* line 254, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 .region-content {
   width: 100%;
   height: auto;
+  overflow: hidden;
+  /*
+  ======================================================================================
+  Mailing List
+  ======================================================================================
+  */
 }
-/* line 258, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .region-content h2 {
   text-align: center;
-  font-size: 22px;
+  font-size: 32px;
   padding: 0px 0px 20px;
   text-transform: uppercase;
   font-family: 'BioRhyme', serif;
   color: #ffebac;
   font-weight: 700;
+  width: 100%;
 }
-/* line 268, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .region-content h3 {
   font-family: 'BioRhyme', serif;
   font-weight: 400;
@@ -263,7 +286,7 @@ Spotify/Youtube Blocks
   border-right: 3px solid #fff6d8;
 }
 @media screen and (max-width: 600px) {
-  /* line 268, ../sass/style.scss */
+  /* line 292, ../sass/style.scss */
   .region-content h3 {
     border: none;
     float: none;
@@ -272,14 +295,14 @@ Spotify/Youtube Blocks
     padding: 0px;
   }
 }
-/* line 289, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .region-content h4 {
   font-family: 'BioRhyme', serif;
   font-weight: 200;
   font-size: 20px;
 }
-/* line 296, ../sass/style.scss */
-.region-content:after {
+/* line 320, ../sass/style.scss */
+.region-content::after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -287,7 +310,7 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 305, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .region-content .embedblock {
   width: 50%;
   float: left;
@@ -295,13 +318,13 @@ Spotify/Youtube Blocks
   height: 600px;
 }
 @media screen and (max-width: 1100px) {
-  /* line 305, ../sass/style.scss */
+  /* line 329, ../sass/style.scss */
   .region-content .embedblock {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 316, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 .region-content .embedblock .content {
   display: table;
   height: 600px;
@@ -310,44 +333,44 @@ Spotify/Youtube Blocks
   padding: 0px 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 316, ../sass/style.scss */
+  /* line 340, ../sass/style.scss */
   .region-content .embedblock .content {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 328, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 332, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer iframe {
   -webkit-box-shadow: 0px 5px 27px 0px black;
   -moz-box-shadow: 0px 5px 27px 0px black;
   box-shadow: 0px 5px 27px 0px black;
 }
 @media screen and (max-width: 1100px) {
-  /* line 332, ../sass/style.scss */
+  /* line 356, ../sass/style.scss */
   .region-content .embedblock .content .blockcontainer iframe {
     width: 100%;
   }
 }
-/* line 346, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .region-content .spotifyblock {
   background: linear-gradient(rgba(122, 47, 62, 0.75), rgba(122, 47, 62, 0.75)), url("../images/paulblock1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 353, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .region-content .youtubeblock {
   background: linear-gradient(rgba(49, 74, 85, 0.75), rgba(49, 74, 85, 0.75)), url("../images/paulblock2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 360, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 .region-content #block-agenda-2 {
   width: 50%;
   float: left;
@@ -359,18 +382,18 @@ Spotify/Youtube Blocks
   background-position: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 360, ../sass/style.scss */
+  /* line 384, ../sass/style.scss */
   .region-content #block-agenda-2 {
     width: 100%;
   }
 }
-/* line 374, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 .region-content #block-agenda-2 .content {
   display: table;
   height: 600px;
   margin: 0 auto;
 }
-/* line 380, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block {
   width: 500px;
   margin: 0 auto;
@@ -378,16 +401,16 @@ Spotify/Youtube Blocks
   vertical-align: middle;
 }
 @media screen and (max-width: 600px) {
-  /* line 380, ../sass/style.scss */
+  /* line 404, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block {
     text-align: center;
   }
 }
-/* line 390, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block #tour-block .tour-date:nth-child(4) {
   border: none;
 }
-/* line 396, ../sass/style.scss */
+/* line 420, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date {
   color: #fff6d8;
   border-bottom: 1px solid #ffebac;
@@ -396,13 +419,13 @@ Spotify/Youtube Blocks
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  /* line 396, ../sass/style.scss */
+  /* line 420, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date {
     border: none;
     height: 95px;
   }
 }
-/* line 408, ../sass/style.scss */
+/* line 432, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date:after {
   visibility: hidden;
   display: block;
@@ -411,7 +434,7 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 417, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date ol {
   width: 388px;
   float: left;
@@ -419,32 +442,34 @@ Spotify/Youtube Blocks
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  /* line 417, ../sass/style.scss */
+  /* line 441, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date ol {
     padding: 0px 20px;
     width: 100%;
   }
 }
-/* line 432, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 {
   background-color: transparent;
 }
-/* line 435, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo {
   display: block !important;
 }
-/* line 438, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li {
   display: inline-block;
-  font-weight: 200;
   letter-spacing: 1px;
-  padding: 0 5px 0 0;
+  padding: 0 8px 0 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  line-height: 14px;
 }
-/* line 445, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li em {
   font-weight: 400;
 }
-/* line 457, ../sass/style.scss */
+/* line 483, ../sass/style.scss */
 .region-content #block-views-news-block {
   width: 50%;
   float: left;
@@ -457,12 +482,12 @@ Spotify/Youtube Blocks
   text-align: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 457, ../sass/style.scss */
+  /* line 483, ../sass/style.scss */
   .region-content #block-views-news-block {
     width: 100%;
   }
 }
-/* line 472, ../sass/style.scss */
+/* line 498, ../sass/style.scss */
 .region-content #block-views-news-block .content {
   display: table;
   width: 500px;
@@ -470,30 +495,30 @@ Spotify/Youtube Blocks
   margin: 0 auto;
 }
 @media screen and (max-width: 600px) {
-  /* line 472, ../sass/style.scss */
+  /* line 498, ../sass/style.scss */
   .region-content #block-views-news-block .content {
     width: 100%;
   }
 }
-/* line 483, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 487, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row {
   padding: 22px 0;
   border-bottom: 1px solid #ffebac;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  /* line 487, ../sass/style.scss */
+  /* line 513, ../sass/style.scss */
   .region-content #block-views-news-block .content .view-news .views-row {
     margin: 0 20px;
     padding: 16px 0px;
   }
 }
-/* line 497, ../sass/style.scss */
+/* line 523, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a {
   font-family: 'BioRhyme', serif;
   font-weight: 300;
@@ -506,11 +531,139 @@ Spotify/Youtube Blocks
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 510, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a:hover {
   color: white;
 }
-/* line 520, ../sass/style.scss */
+/* line 542, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row:nth-child(4) {
   border: none;
+}
+/* line 549, ../sass/style.scss */
+.region-content #block-block-3 {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  float: left;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/paulpsyched.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: #020202;
+  padding: 150px 20px;
+  box-sizing: border-box;
+}
+/* line 564, ../sass/style.scss */
+.region-content #block-block-3 h2 {
+  padding-bottom: 50px;
+}
+/* line 568, ../sass/style.scss */
+.region-content #block-block-3 .content {
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
+}
+@media screen and (max-width: 1100px) {
+  /* line 568, ../sass/style.scss */
+  .region-content #block-block-3 .content {
+    width: 100%;
+  }
+}
+/* line 588, ../sass/style.scss */
+.region-content #block-views-webform-block {
+  background-color: #1a1a1a;
+  float: left;
+  padding: 50px 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+/* line 596, ../sass/style.scss */
+.region-content #block-views-webform-block h2 {
+  font-weight: 200;
+}
+/* line 600, ../sass/style.scss */
+.region-content #block-views-webform-block .content {
+  margin: 0 auto;
+}
+/* line 604, ../sass/style.scss */
+.region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
+  display: inline-block;
+  color: #ffebac;
+  font-family: 'BioRhyme', serif;
+  font-weight: 300;
+  padding-right: 20px;
+}
+@media screen and (max-width: 600px) {
+  /* line 604, ../sass/style.scss */
+  .region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
+    padding: 0;
+    padding-bottom: 10px;
+    display: inherit;
+  }
+}
+/* line 619, ../sass/style.scss */
+.region-content #block-views-webform-block .content input#edit-submitted-your-email {
+  background-color: #2D2D2D;
+  border: none;
+  height: 30px;
+  color: white;
+}
+/* line 626, ../sass/style.scss */
+.region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit {
+  border: none;
+  font-family: 'BioRhyme', serif;
+  text-transform: uppercase;
+  color: #ffebac;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  background-color: #382b23;
+}
+/* line 636, ../sass/style.scss */
+.region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+/* line 644, ../sass/style.scss */
+.region-content #block-block-4 {
+  width: 100%;
+  background-color: #131313;
+  float: left;
+  padding: 15px 20px;
+}
+/* line 650, ../sass/style.scss */
+.region-content #block-block-4 .content {
+  width: 100%;
+}
+/* line 654, ../sass/style.scss */
+.region-content #block-block-4 #footer {
+  width: 100%;
+}
+/* line 657, ../sass/style.scss */
+.region-content #block-block-4 #footer #footer-item-email,
+.region-content #block-block-4 #footer #footer-item-copyright,
+.region-content #block-block-4 #footer #footer-item-siteby {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  color: #444444;
+  opacity: 0.8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 671, ../sass/style.scss */
+.region-content #block-block-4 #footer #footer-item-email a,
+.region-content #block-block-4 #footer #footer-item-copyright a,
+.region-content #block-block-4 #footer #footer-item-siteby a {
+  color: #973141;
+  text-decoration: none;
+}
+/* line 677, ../sass/style.scss */
+.region-content #block-block-4 #footer #footer-item-email,
+.region-content #block-block-4 #footer #footer-item-copyright {
+  opacity: 1;
 }

@@ -9,6 +9,7 @@
 ?>
 <head>
 <link href='https://fonts.googleapis.com/css?family=BioRhyme:400,800,300,700,200' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -26,6 +27,7 @@
             <h1 class="header__site-name" id="site-name">
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
+            <h2>Country | Rock | Alternative</h2>
           <?php endif; ?>
 
           
