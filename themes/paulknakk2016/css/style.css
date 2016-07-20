@@ -57,8 +57,13 @@ table {
 }
 
 /* line 47, ../sass/style.scss */
-#page-title, .breadcrumbs {
+.front #page-title, .breadcrumbs, .breadcrumb, .not-front #site-slogan {
   display: none;
+}
+
+/* line 51, ../sass/style.scss */
+.not-front h1#page-title {
+  padding-top: 120px;
 }
 
 /*
@@ -71,7 +76,7 @@ Variables
 Miscellaneous
 ======================================================================================
 */
-/* line 77, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 a.more-button {
   text-align: center;
   display: block;
@@ -83,19 +88,23 @@ a.more-button {
   margin: 0 auto;
   font-family: 'BioRhyme', serif;
 }
+/* line 92, ../sass/style.scss */
+a.more-button:hover {
+  opacity: 0.7;
+}
 
 /*
 ======================================================================================
 Social Media
 ======================================================================================
 */
-/* line 95, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 #social-media-menu {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-/* line 100, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 #social-media-menu .fa {
   width: 22px;
   text-align: center;
@@ -114,7 +123,7 @@ Social Media
   -o-transition: background 300ms ease;
   transition: background 300ms ease;
 }
-/* line 118, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 #social-media-menu .fa:hover {
   background-color: #973141;
   color: #ffebac;
@@ -125,7 +134,7 @@ Social Media
 Page
 ======================================================================================
 */
-/* line 132, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .front #header-wrapper {
   background: url("../images/paulknakkcompressed.jpg");
   background-repeat: no-repeat;
@@ -134,10 +143,16 @@ Page
   height: 1200px;
 }
 
-/* line 141, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 body {
   width: 100vw;
   height: 100vh;
+}
+
+/* line 154, ../sass/style.scss */
+.small {
+  height: 60px;
+  background-color: blue;
 }
 
 /*
@@ -145,18 +160,25 @@ body {
 Header
 ======================================================================================
 */
-/* line 153, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #header-wrapper {
   font-family: 'BioRhyme', serif;
 }
-/* line 156, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 #header-wrapper #header {
   width: 100%;
   height: 75px;
   background: rgba(244, 248, 251, 0.8);
   position: fixed;
+  transition: all 300ms ease;
+  z-index: 12;
 }
-/* line 162, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
+#header-wrapper #header #header.small {
+  height: 60px;
+  background-color: blue;
+}
+/* line 180, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan {
   position: absolute;
   top: 5px;
@@ -168,18 +190,18 @@ Header
   transform: translateX(-50%);
   text-align: center;
 }
-/* line 173, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 178, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name a {
   color: #973141;
   text-decoration: none;
 }
-/* line 187, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 #header-wrapper #header h2 {
   font-family: 'Robot', sans-serif;
   font-weight: 400;
@@ -190,7 +212,7 @@ Header
   text-align: center;
   padding-left: 9px;
 }
-/* line 201, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #header-wrapper #site-slogan {
   color: #835932;
   position: absolute;
@@ -198,6 +220,8 @@ Header
   text-transform: uppercase;
   font-weight: 100;
   left: 50%;
+  padding: 0px 20px;
+  box-sizing: border-box;
   width: 100%;
   font-size: 34px;
   -moz-transform: translateX(-50%);
@@ -207,24 +231,30 @@ Header
   transform: translateX(-50%);
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  /* line 219, ../sass/style.scss */
+  #header-wrapper #site-slogan {
+    font-size: 24px;
+  }
+}
 
 /*
 ======================================================================================
 Menu
 ======================================================================================
 */
-/* line 227, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 .region-header {
   position: absolute;
   top: 20px;
   left: 20px;
 }
-/* line 234, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .region-header .menu .leaf {
   font-size: 15px;
   display: inline-block;
 }
-/* line 238, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .region-header .menu .leaf a {
   text-decoration: none;
   color: #973141;
@@ -238,8 +268,15 @@ Menu
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 252, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .region-header .menu .leaf a:hover {
+  color: #ffebac;
+  background-color: #835932;
+  border-left: 5px solid #ffebac;
+  padding: 6px 12px;
+}
+/* line 286, ../sass/style.scss */
+.region-header .menu .active-trail a {
   color: #ffebac;
   background-color: #835932;
   border-left: 5px solid #ffebac;
@@ -251,7 +288,7 @@ Menu
 Spotify/Youtube Blocks
 ======================================================================================
 */
-/* line 272, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .region-content {
   width: 100%;
   height: auto;
@@ -262,10 +299,10 @@ Spotify/Youtube Blocks
   ======================================================================================
   */
 }
-/* line 277, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .region-content h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 27px;
   padding: 0px 0px 20px;
   text-transform: uppercase;
   font-family: 'BioRhyme', serif;
@@ -273,8 +310,8 @@ Spotify/Youtube Blocks
   font-weight: 700;
   width: 100%;
 }
-/* line 292, ../sass/style.scss */
-.region-content h3 {
+/* line 323, ../sass/style.scss */
+.region-content h3:not(.field-name-field-songs-lyrics) {
   font-family: 'BioRhyme', serif;
   font-weight: 400;
   color: #fff6d8;
@@ -283,11 +320,10 @@ Spotify/Youtube Blocks
   padding: 0px 30px 0px 0px;
   height: 50px;
   float: left;
-  border-right: 3px solid #fff6d8;
 }
 @media screen and (max-width: 600px) {
-  /* line 292, ../sass/style.scss */
-  .region-content h3 {
+  /* line 323, ../sass/style.scss */
+  .region-content h3:not(.field-name-field-songs-lyrics) {
     border: none;
     float: none;
     width: 100%;
@@ -295,13 +331,13 @@ Spotify/Youtube Blocks
     padding: 0px;
   }
 }
-/* line 313, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .region-content h4 {
   font-family: 'BioRhyme', serif;
   font-weight: 200;
   font-size: 20px;
 }
-/* line 320, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .region-content::after {
   visibility: hidden;
   display: block;
@@ -310,7 +346,7 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 329, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 .region-content .embedblock {
   width: 50%;
   float: left;
@@ -318,13 +354,13 @@ Spotify/Youtube Blocks
   height: 600px;
 }
 @media screen and (max-width: 1100px) {
-  /* line 329, ../sass/style.scss */
+  /* line 359, ../sass/style.scss */
   .region-content .embedblock {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 340, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .region-content .embedblock .content {
   display: table;
   height: 600px;
@@ -333,44 +369,44 @@ Spotify/Youtube Blocks
   padding: 0px 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 340, ../sass/style.scss */
+  /* line 370, ../sass/style.scss */
   .region-content .embedblock .content {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 352, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 356, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer iframe {
   -webkit-box-shadow: 0px 5px 27px 0px black;
   -moz-box-shadow: 0px 5px 27px 0px black;
   box-shadow: 0px 5px 27px 0px black;
 }
 @media screen and (max-width: 1100px) {
-  /* line 356, ../sass/style.scss */
+  /* line 386, ../sass/style.scss */
   .region-content .embedblock .content .blockcontainer iframe {
     width: 100%;
   }
 }
-/* line 370, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 .region-content .spotifyblock {
   background: linear-gradient(rgba(122, 47, 62, 0.75), rgba(122, 47, 62, 0.75)), url("../images/paulblock1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 377, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 .region-content .youtubeblock {
   background: linear-gradient(rgba(49, 74, 85, 0.75), rgba(49, 74, 85, 0.75)), url("../images/paulblock2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 384, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .region-content #block-agenda-2 {
   width: 50%;
   float: left;
@@ -382,18 +418,18 @@ Spotify/Youtube Blocks
   background-position: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 384, ../sass/style.scss */
+  /* line 414, ../sass/style.scss */
   .region-content #block-agenda-2 {
     width: 100%;
   }
 }
-/* line 398, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 .region-content #block-agenda-2 .content {
   display: table;
   height: 600px;
   margin: 0 auto;
 }
-/* line 404, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block {
   width: 500px;
   margin: 0 auto;
@@ -401,31 +437,31 @@ Spotify/Youtube Blocks
   vertical-align: middle;
 }
 @media screen and (max-width: 600px) {
-  /* line 404, ../sass/style.scss */
+  /* line 434, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block {
     text-align: center;
   }
 }
-/* line 414, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block #tour-block .tour-date:nth-child(4) {
   border: none;
 }
-/* line 420, ../sass/style.scss */
+/* line 450, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date {
   color: #fff6d8;
-  border-bottom: 1px solid #ffebac;
+  /*border-bottom: 1px solid $gold;*/
   padding: 25px 0;
   height: 95px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  /* line 420, ../sass/style.scss */
+  /* line 450, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date {
     border: none;
     height: 95px;
   }
 }
-/* line 432, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date:after {
   visibility: hidden;
   display: block;
@@ -434,29 +470,31 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 441, ../sass/style.scss */
+/* line 471, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date ol {
   width: 388px;
   float: left;
   padding: 0 0 0 30px;
   box-sizing: border-box;
+  border-left: 3px solid #fff6d8;
 }
 @media screen and (max-width: 600px) {
-  /* line 441, ../sass/style.scss */
+  /* line 471, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date ol {
     padding: 0px 20px;
     width: 100%;
+    border: none;
   }
 }
-/* line 456, ../sass/style.scss */
+/* line 488, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 {
   background-color: transparent;
 }
-/* line 459, ../sass/style.scss */
+/* line 491, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo {
   display: block !important;
 }
-/* line 462, ../sass/style.scss */
+/* line 494, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li {
   display: inline-block;
   letter-spacing: 1px;
@@ -465,11 +503,11 @@ Spotify/Youtube Blocks
   font-weight: 100;
   line-height: 14px;
 }
-/* line 471, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li em {
   font-weight: 400;
 }
-/* line 483, ../sass/style.scss */
+/* line 513, ../sass/style.scss */
 .region-content #block-views-news-block {
   width: 50%;
   float: left;
@@ -482,12 +520,12 @@ Spotify/Youtube Blocks
   text-align: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 483, ../sass/style.scss */
+  /* line 513, ../sass/style.scss */
   .region-content #block-views-news-block {
     width: 100%;
   }
 }
-/* line 498, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 .region-content #block-views-news-block .content {
   display: table;
   width: 500px;
@@ -495,30 +533,30 @@ Spotify/Youtube Blocks
   margin: 0 auto;
 }
 @media screen and (max-width: 600px) {
-  /* line 498, ../sass/style.scss */
+  /* line 528, ../sass/style.scss */
   .region-content #block-views-news-block .content {
     width: 100%;
   }
 }
-/* line 509, ../sass/style.scss */
+/* line 539, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 513, ../sass/style.scss */
+/* line 543, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row {
   padding: 22px 0;
   border-bottom: 1px solid #ffebac;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  /* line 513, ../sass/style.scss */
+  /* line 543, ../sass/style.scss */
   .region-content #block-views-news-block .content .view-news .views-row {
     margin: 0 20px;
     padding: 16px 0px;
   }
 }
-/* line 523, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a {
   font-family: 'BioRhyme', serif;
   font-weight: 300;
@@ -531,15 +569,15 @@ Spotify/Youtube Blocks
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 536, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a:hover {
   color: white;
 }
-/* line 542, ../sass/style.scss */
+/* line 572, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row:nth-child(4) {
   border: none;
 }
-/* line 549, ../sass/style.scss */
+/* line 579, ../sass/style.scss */
 .region-content #block-block-3 {
   width: 100%;
   height: auto;
@@ -553,23 +591,23 @@ Spotify/Youtube Blocks
   padding: 150px 20px;
   box-sizing: border-box;
 }
-/* line 564, ../sass/style.scss */
+/* line 594, ../sass/style.scss */
 .region-content #block-block-3 h2 {
   padding-bottom: 50px;
 }
-/* line 568, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 .region-content #block-block-3 .content {
   width: 50%;
   margin: 0 auto;
   height: auto;
 }
 @media screen and (max-width: 1100px) {
-  /* line 568, ../sass/style.scss */
+  /* line 598, ../sass/style.scss */
   .region-content #block-block-3 .content {
     width: 100%;
   }
 }
-/* line 588, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .region-content #block-views-webform-block {
   background-color: #1a1a1a;
   float: left;
@@ -578,15 +616,15 @@ Spotify/Youtube Blocks
   text-align: center;
   box-sizing: border-box;
 }
-/* line 596, ../sass/style.scss */
+/* line 626, ../sass/style.scss */
 .region-content #block-views-webform-block h2 {
   font-weight: 200;
 }
-/* line 600, ../sass/style.scss */
+/* line 630, ../sass/style.scss */
 .region-content #block-views-webform-block .content {
   margin: 0 auto;
 }
-/* line 604, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
   display: inline-block;
   color: #ffebac;
@@ -595,21 +633,21 @@ Spotify/Youtube Blocks
   padding-right: 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 604, ../sass/style.scss */
+  /* line 634, ../sass/style.scss */
   .region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
     padding: 0;
     padding-bottom: 10px;
     display: inherit;
   }
 }
-/* line 619, ../sass/style.scss */
+/* line 649, ../sass/style.scss */
 .region-content #block-views-webform-block .content input#edit-submitted-your-email {
   background-color: #2D2D2D;
   border: none;
   height: 30px;
   color: white;
 }
-/* line 626, ../sass/style.scss */
+/* line 656, ../sass/style.scss */
 .region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit {
   border: none;
   font-family: 'BioRhyme', serif;
@@ -620,27 +658,27 @@ Spotify/Youtube Blocks
   padding: 10px 20px;
   background-color: #382b23;
 }
-/* line 636, ../sass/style.scss */
+/* line 666, ../sass/style.scss */
 .region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-/* line 644, ../sass/style.scss */
+/* line 674, ../sass/style.scss */
 .region-content #block-block-4 {
   width: 100%;
   background-color: #131313;
   float: left;
-  padding: 15px 20px;
+  padding: 15px 20px 16px;
 }
-/* line 650, ../sass/style.scss */
+/* line 680, ../sass/style.scss */
 .region-content #block-block-4 .content {
   width: 100%;
 }
-/* line 654, ../sass/style.scss */
+/* line 684, ../sass/style.scss */
 .region-content #block-block-4 #footer {
   width: 100%;
 }
-/* line 657, ../sass/style.scss */
+/* line 687, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email,
 .region-content #block-block-4 #footer #footer-item-copyright,
 .region-content #block-block-4 #footer #footer-item-siteby {
@@ -651,19 +689,112 @@ Spotify/Youtube Blocks
   opacity: 0.8;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 671, ../sass/style.scss */
+/* line 701, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email a,
 .region-content #block-block-4 #footer #footer-item-copyright a,
 .region-content #block-block-4 #footer #footer-item-siteby a {
   color: #973141;
   text-decoration: none;
 }
-/* line 677, ../sass/style.scss */
+/* line 707, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email,
 .region-content #block-block-4 #footer #footer-item-copyright {
   opacity: 1;
+}
+
+/*
+======================================================================================
+Mean Menu
+======================================================================================
+*/
+/* line 725, ../sass/style.scss */
+.mean-bar {
+  background: transparent !important;
+  z-index: 5 !important;
+}
+
+/*
+======================================================================================
+Music Block
+======================================================================================
+*/
+/* line 736, ../sass/style.scss */
+h1 {
+  text-transform: uppercase;
+  font-family: 'BioRhyme', serif;
+  color: #ffebac;
+  font-weight: 700;
+  width: 100%;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* line 747, ../sass/style.scss */
+#main {
+  position: relative;
+}
+/* line 751, ../sass/style.scss */
+#main:after {
+  background: url("../images/tileable-wood-colored.png");
+  background-color: #331b08;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+/* line 767, ../sass/style.scss */
+#main .region-content .field-name-field-description {
+  text-align: center;
+  color: #fff6d8;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding: 20px;
+}
+/* line 777, ../sass/style.scss */
+#main .region-content .field-name-field-description:before, #main .region-content .field-name-field-description:after {
+  content: "";
+  height: 2px;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 235, 172, 0.7) 50%, transparent 100%);
+  display: block;
+  margin: 15px 0px;
+}
+/* line 786, ../sass/style.scss */
+#main .region-content #block-views-music-block {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 790, ../sass/style.scss */
+#main .region-content #block-views-music-block .views-row {
+  width: 50%;
+}
+/* line 795, ../sass/style.scss */
+#main .region-content #block-views-music-block .views-row .views-field-field-album-art img {
+  border: 2px solid #ffebac;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 5px 27px 0px black;
+  -moz-box-shadow: 0px 5px 27px 0px black;
+  box-shadow: 0px 5px 27px 0px black;
+}
+/* line 808, ../sass/style.scss */
+#main .region-content #block-views-music-block .views-row .views-field-title a {
+  text-decoration: none;
+  color: #ffebac;
+  font-family: 'BioRhyme', serif;
+  font-weight: 200;
+  font-size: 24px;
+  text-transform: uppercase;
 }
