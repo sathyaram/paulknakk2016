@@ -66,6 +66,12 @@ table {
   padding-top: 120px;
 }
 
+/* line 55, ../sass/style.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
 /*
 ======================================================================================
 Variables
@@ -76,7 +82,7 @@ Variables
 Miscellaneous
 ======================================================================================
 */
-/* line 81, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 a.more-button {
   text-align: center;
   display: block;
@@ -88,9 +94,17 @@ a.more-button {
   margin: 0 auto;
   font-family: 'BioRhyme', serif;
 }
-/* line 92, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 a.more-button:hover {
   opacity: 0.7;
+}
+
+/* line 102, ../sass/style.scss */
+.field-label {
+  font-family: 'BioRhyme', serif;
+  font-weight: 400;
+  color: #fff6d8;
+  font-size: 26px;
 }
 
 /*
@@ -98,20 +112,26 @@ a.more-button:hover {
 Social Media
 ======================================================================================
 */
-/* line 103, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 #social-media-menu {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 25px;
 }
-/* line 108, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 115, ../sass/style.scss */
+  #social-media-menu {
+    top: 10px;
+  }
+}
+/* line 124, ../sass/style.scss */
 #social-media-menu .fa {
   width: 22px;
   text-align: center;
   height: 22px;
   line-height: 22px;
   vertical-align: middle;
-  color: #973141;
+  color: #fff6d8;
   padding: 3px;
   -webkit-border-radius: 25px 25px 25px 25px;
   border-radius: 25px 25px 25px 25px;
@@ -123,10 +143,28 @@ Social Media
   -o-transition: background 300ms ease;
   transition: background 300ms ease;
 }
-/* line 126, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #social-media-menu .fa:hover {
   background-color: #973141;
   color: #ffebac;
+}
+@media screen and (max-width: 1100px) {
+  /* line 124, ../sass/style.scss */
+  #social-media-menu .fa {
+    padding: 0px;
+    font-size: 12px;
+  }
+}
+
+/* line 155, ../sass/style.scss */
+#social-row-1, #social-row-2 {
+  display: inline-block;
+}
+@media screen and (max-width: 1100px) {
+  /* line 155, ../sass/style.scss */
+  #social-row-1, #social-row-2 {
+    display: block;
+  }
 }
 
 /*
@@ -134,7 +172,7 @@ Social Media
 Page
 ======================================================================================
 */
-/* line 140, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .front #header-wrapper {
   background: url("../images/paulknakkcompressed.jpg");
   background-repeat: no-repeat;
@@ -143,13 +181,13 @@ Page
   height: 1200px;
 }
 
-/* line 149, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 body {
   width: 100vw;
   height: 100vh;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .small {
   height: 60px;
   background-color: blue;
@@ -160,25 +198,32 @@ body {
 Header
 ======================================================================================
 */
-/* line 164, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 #header-wrapper {
   font-family: 'BioRhyme', serif;
 }
-/* line 167, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 #header-wrapper #header {
   width: 100%;
   height: 75px;
-  background: rgba(244, 248, 251, 0.8);
+  background: rgba(51, 27, 8, 0.7);
   position: fixed;
   transition: all 300ms ease;
   z-index: 12;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 175, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 196, ../sass/style.scss */
+  #header-wrapper #header {
+    height: 60px;
+  }
+}
+/* line 209, ../sass/style.scss */
 #header-wrapper #header #header.small {
   height: 60px;
   background-color: blue;
 }
-/* line 180, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan {
   position: absolute;
   top: 5px;
@@ -190,29 +235,70 @@ Header
   transform: translateX(-50%);
   text-align: center;
 }
-/* line 191, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 214, ../sass/style.scss */
+  #header-wrapper #header #name-and-slogan {
+    top: 12px;
+    left: 70px;
+    transform: none;
+  }
+}
+/* line 232, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 196, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 232, ../sass/style.scss */
+  #header-wrapper #header #name-and-slogan #site-name {
+    font-size: 24px;
+  }
+}
+/* line 241, ../sass/style.scss */
 #header-wrapper #header #name-and-slogan #site-name a {
-  color: #973141;
+  color: #fff6d8;
   text-decoration: none;
 }
-/* line 205, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
+#header-wrapper #header #sidr-wrapper-0 {
+  width: 30px;
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: 13px;
+  left: 20px;
+}
+/* line 258, ../sass/style.scss */
+#header-wrapper #header #sidr-wrapper-0 span {
+  display: block;
+  height: 4px;
+  width: 30px;
+  border: none;
+  background-color: white;
+  border-radius: 70px !important;
+  margin: 5px auto 5px auto;
+}
+/* line 270, ../sass/style.scss */
 #header-wrapper #header h2 {
-  font-family: 'Robot', sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 8px;
+  letter-spacing: 7px;
   font-size: 12px;
-  color: #835932;
+  color: #ffebac;
   text-align: center;
   padding-left: 9px;
 }
-/* line 219, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 270, ../sass/style.scss */
+  #header-wrapper #header h2 {
+    letter-spacing: 1px;
+    font-size: 10px;
+    padding: 0px;
+  }
+}
+/* line 290, ../sass/style.scss */
 #header-wrapper #site-slogan {
   color: #835932;
   position: absolute;
@@ -223,7 +309,7 @@ Header
   padding: 0px 20px;
   box-sizing: border-box;
   width: 100%;
-  font-size: 34px;
+  font-size: 24px;
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -o-transform: translateX(-50%);
@@ -232,7 +318,7 @@ Header
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  /* line 219, ../sass/style.scss */
+  /* line 290, ../sass/style.scss */
   #header-wrapper #site-slogan {
     font-size: 24px;
   }
@@ -243,21 +329,27 @@ Header
 Menu
 ======================================================================================
 */
-/* line 251, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .region-header {
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: 20px;
 }
-/* line 258, ../sass/style.scss */
+@media screen and (max-width: 1100px) {
+  /* line 322, ../sass/style.scss */
+  .region-header {
+    top: 15px;
+  }
+}
+/* line 333, ../sass/style.scss */
 .region-header .menu .leaf {
   font-size: 15px;
   display: inline-block;
 }
-/* line 262, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .region-header .menu .leaf a {
   text-decoration: none;
-  color: #973141;
+  color: #fff6d8;
   padding: 6px 5px 6px 0px;
   box-sizing: border-box;
   display: block;
@@ -268,14 +360,14 @@ Menu
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 276, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .region-header .menu .leaf a:hover {
   color: #ffebac;
   background-color: #835932;
   border-left: 5px solid #ffebac;
   padding: 6px 12px;
 }
-/* line 286, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .region-header .menu .active-trail a {
   color: #ffebac;
   background-color: #835932;
@@ -288,7 +380,7 @@ Menu
 Spotify/Youtube Blocks
 ======================================================================================
 */
-/* line 303, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .region-content {
   width: 100%;
   height: auto;
@@ -299,7 +391,7 @@ Spotify/Youtube Blocks
   ======================================================================================
   */
 }
-/* line 308, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .region-content h2 {
   text-align: center;
   font-size: 27px;
@@ -310,8 +402,8 @@ Spotify/Youtube Blocks
   font-weight: 700;
   width: 100%;
 }
-/* line 323, ../sass/style.scss */
-.region-content h3:not(.field-name-field-songs-lyrics) {
+/* line 398, ../sass/style.scss */
+.region-content h3:not(h3#ui-accordion-faqfield_field_songs_lyrics_12-header-0) {
   font-family: 'BioRhyme', serif;
   font-weight: 400;
   color: #fff6d8;
@@ -322,8 +414,8 @@ Spotify/Youtube Blocks
   float: left;
 }
 @media screen and (max-width: 600px) {
-  /* line 323, ../sass/style.scss */
-  .region-content h3:not(.field-name-field-songs-lyrics) {
+  /* line 398, ../sass/style.scss */
+  .region-content h3:not(h3#ui-accordion-faqfield_field_songs_lyrics_12-header-0) {
     border: none;
     float: none;
     width: 100%;
@@ -331,13 +423,13 @@ Spotify/Youtube Blocks
     padding: 0px;
   }
 }
-/* line 343, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 .region-content h4 {
   font-family: 'BioRhyme', serif;
   font-weight: 200;
   font-size: 20px;
 }
-/* line 350, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .region-content::after {
   visibility: hidden;
   display: block;
@@ -346,7 +438,7 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 359, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .region-content .embedblock {
   width: 50%;
   float: left;
@@ -354,13 +446,13 @@ Spotify/Youtube Blocks
   height: 600px;
 }
 @media screen and (max-width: 1100px) {
-  /* line 359, ../sass/style.scss */
+  /* line 434, ../sass/style.scss */
   .region-content .embedblock {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 370, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 .region-content .embedblock .content {
   display: table;
   height: 600px;
@@ -369,44 +461,44 @@ Spotify/Youtube Blocks
   padding: 0px 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 370, ../sass/style.scss */
+  /* line 445, ../sass/style.scss */
   .region-content .embedblock .content {
     width: 100%;
     box-sizing: border-box;
   }
 }
-/* line 382, ../sass/style.scss */
+/* line 457, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 386, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 .region-content .embedblock .content .blockcontainer iframe {
   -webkit-box-shadow: 0px 5px 27px 0px black;
   -moz-box-shadow: 0px 5px 27px 0px black;
   box-shadow: 0px 5px 27px 0px black;
 }
 @media screen and (max-width: 1100px) {
-  /* line 386, ../sass/style.scss */
+  /* line 461, ../sass/style.scss */
   .region-content .embedblock .content .blockcontainer iframe {
     width: 100%;
   }
 }
-/* line 400, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .region-content .spotifyblock {
   background: linear-gradient(rgba(122, 47, 62, 0.75), rgba(122, 47, 62, 0.75)), url("../images/paulblock1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 407, ../sass/style.scss */
+/* line 482, ../sass/style.scss */
 .region-content .youtubeblock {
   background: linear-gradient(rgba(49, 74, 85, 0.75), rgba(49, 74, 85, 0.75)), url("../images/paulblock2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-/* line 414, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .region-content #block-agenda-2 {
   width: 50%;
   float: left;
@@ -418,18 +510,18 @@ Spotify/Youtube Blocks
   background-position: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 414, ../sass/style.scss */
+  /* line 489, ../sass/style.scss */
   .region-content #block-agenda-2 {
     width: 100%;
   }
 }
-/* line 428, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .region-content #block-agenda-2 .content {
   display: table;
   height: 600px;
   margin: 0 auto;
 }
-/* line 434, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block {
   width: 500px;
   margin: 0 auto;
@@ -437,16 +529,16 @@ Spotify/Youtube Blocks
   vertical-align: middle;
 }
 @media screen and (max-width: 600px) {
-  /* line 434, ../sass/style.scss */
+  /* line 509, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block {
     text-align: center;
   }
 }
-/* line 444, ../sass/style.scss */
+/* line 519, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block #tour-block .tour-date:nth-child(4) {
   border: none;
 }
-/* line 450, ../sass/style.scss */
+/* line 525, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date {
   color: #fff6d8;
   /*border-bottom: 1px solid $gold;*/
@@ -455,13 +547,13 @@ Spotify/Youtube Blocks
   box-sizing: border-box;
 }
 @media screen and (max-width: 600px) {
-  /* line 450, ../sass/style.scss */
+  /* line 525, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date {
     border: none;
     height: 95px;
   }
 }
-/* line 462, ../sass/style.scss */
+/* line 537, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date:after {
   visibility: hidden;
   display: block;
@@ -470,7 +562,7 @@ Spotify/Youtube Blocks
   clear: both;
   height: 0;
 }
-/* line 471, ../sass/style.scss */
+/* line 546, ../sass/style.scss */
 .region-content #block-agenda-2 .agenda-block .tour-date ol {
   width: 388px;
   float: left;
@@ -479,35 +571,35 @@ Spotify/Youtube Blocks
   border-left: 3px solid #fff6d8;
 }
 @media screen and (max-width: 600px) {
-  /* line 471, ../sass/style.scss */
+  /* line 546, ../sass/style.scss */
   .region-content #block-agenda-2 .agenda-block .tour-date ol {
     padding: 0px 20px;
     width: 100%;
     border: none;
   }
 }
-/* line 488, ../sass/style.scss */
+/* line 563, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 {
   background-color: transparent;
 }
-/* line 491, ../sass/style.scss */
+/* line 566, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo {
   display: block !important;
 }
-/* line 494, ../sass/style.scss */
+/* line 569, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li {
   display: inline-block;
   letter-spacing: 1px;
   padding: 0 8px 0 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 100;
   line-height: 14px;
 }
-/* line 503, ../sass/style.scss */
+/* line 578, ../sass/style.scss */
 .region-content #block-agenda-2 li.cal_0 ul.moreinfo li em {
   font-weight: 400;
 }
-/* line 513, ../sass/style.scss */
+/* line 588, ../sass/style.scss */
 .region-content #block-views-news-block {
   width: 50%;
   float: left;
@@ -520,12 +612,12 @@ Spotify/Youtube Blocks
   text-align: center;
 }
 @media screen and (max-width: 1100px) {
-  /* line 513, ../sass/style.scss */
+  /* line 588, ../sass/style.scss */
   .region-content #block-views-news-block {
     width: 100%;
   }
 }
-/* line 528, ../sass/style.scss */
+/* line 603, ../sass/style.scss */
 .region-content #block-views-news-block .content {
   display: table;
   width: 500px;
@@ -533,30 +625,30 @@ Spotify/Youtube Blocks
   margin: 0 auto;
 }
 @media screen and (max-width: 600px) {
-  /* line 528, ../sass/style.scss */
+  /* line 603, ../sass/style.scss */
   .region-content #block-views-news-block .content {
     width: 100%;
   }
 }
-/* line 539, ../sass/style.scss */
+/* line 614, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 543, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row {
   padding: 22px 0;
   border-bottom: 1px solid #ffebac;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  /* line 543, ../sass/style.scss */
+  /* line 618, ../sass/style.scss */
   .region-content #block-views-news-block .content .view-news .views-row {
     margin: 0 20px;
     padding: 16px 0px;
   }
 }
-/* line 553, ../sass/style.scss */
+/* line 628, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a {
   font-family: 'BioRhyme', serif;
   font-weight: 300;
@@ -569,15 +661,15 @@ Spotify/Youtube Blocks
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
-/* line 566, ../sass/style.scss */
+/* line 641, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row a:hover {
   color: white;
 }
-/* line 572, ../sass/style.scss */
+/* line 647, ../sass/style.scss */
 .region-content #block-views-news-block .content .view-news .views-row:nth-child(4) {
   border: none;
 }
-/* line 579, ../sass/style.scss */
+/* line 654, ../sass/style.scss */
 .region-content #block-block-3 {
   width: 100%;
   height: auto;
@@ -591,40 +683,40 @@ Spotify/Youtube Blocks
   padding: 150px 20px;
   box-sizing: border-box;
 }
-/* line 594, ../sass/style.scss */
+/* line 669, ../sass/style.scss */
 .region-content #block-block-3 h2 {
   padding-bottom: 50px;
 }
-/* line 598, ../sass/style.scss */
+/* line 673, ../sass/style.scss */
 .region-content #block-block-3 .content {
   width: 50%;
   margin: 0 auto;
   height: auto;
 }
 @media screen and (max-width: 1100px) {
-  /* line 598, ../sass/style.scss */
+  /* line 673, ../sass/style.scss */
   .region-content #block-block-3 .content {
     width: 100%;
   }
 }
-/* line 618, ../sass/style.scss */
+/* line 693, ../sass/style.scss */
 .region-content #block-views-webform-block {
   background-color: #1a1a1a;
   float: left;
-  padding: 50px 20px;
+  padding: 50px 20px 20px;
   width: 100%;
   text-align: center;
   box-sizing: border-box;
 }
-/* line 626, ../sass/style.scss */
+/* line 701, ../sass/style.scss */
 .region-content #block-views-webform-block h2 {
   font-weight: 200;
 }
-/* line 630, ../sass/style.scss */
+/* line 705, ../sass/style.scss */
 .region-content #block-views-webform-block .content {
   margin: 0 auto;
 }
-/* line 634, ../sass/style.scss */
+/* line 709, ../sass/style.scss */
 .region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
   display: inline-block;
   color: #ffebac;
@@ -633,21 +725,21 @@ Spotify/Youtube Blocks
   padding-right: 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 634, ../sass/style.scss */
+  /* line 709, ../sass/style.scss */
   .region-content #block-views-webform-block .content .form-item.webform-component.webform-component-email.webform-component--your-email label {
     padding: 0;
     padding-bottom: 10px;
     display: inherit;
   }
 }
-/* line 649, ../sass/style.scss */
+/* line 724, ../sass/style.scss */
 .region-content #block-views-webform-block .content input#edit-submitted-your-email {
   background-color: #2D2D2D;
   border: none;
   height: 30px;
   color: white;
 }
-/* line 656, ../sass/style.scss */
+/* line 731, ../sass/style.scss */
 .region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit {
   border: none;
   font-family: 'BioRhyme', serif;
@@ -658,27 +750,28 @@ Spotify/Youtube Blocks
   padding: 10px 20px;
   background-color: #382b23;
 }
-/* line 666, ../sass/style.scss */
+/* line 741, ../sass/style.scss */
 .region-content #block-views-webform-block .content input.webform-submit.button-primary.form-submit:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-/* line 674, ../sass/style.scss */
+/* line 749, ../sass/style.scss */
 .region-content #block-block-4 {
   width: 100%;
   background-color: #131313;
   float: left;
   padding: 15px 20px 16px;
+  box-sizing: border-box;
 }
-/* line 680, ../sass/style.scss */
+/* line 756, ../sass/style.scss */
 .region-content #block-block-4 .content {
   width: 100%;
 }
-/* line 684, ../sass/style.scss */
+/* line 760, ../sass/style.scss */
 .region-content #block-block-4 #footer {
   width: 100%;
 }
-/* line 687, ../sass/style.scss */
+/* line 763, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email,
 .region-content #block-block-4 #footer #footer-item-copyright,
 .region-content #block-block-4 #footer #footer-item-siteby {
@@ -687,20 +780,29 @@ Spotify/Youtube Blocks
   text-align: center;
   color: #444444;
   opacity: 0.8;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 701, ../sass/style.scss */
+@media screen and (max-width: 675px) {
+  /* line 763, ../sass/style.scss */
+  .region-content #block-block-4 #footer #footer-item-email,
+  .region-content #block-block-4 #footer #footer-item-copyright,
+  .region-content #block-block-4 #footer #footer-item-siteby {
+    width: 100%;
+    line-height: 25px;
+  }
+}
+/* line 782, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email a,
 .region-content #block-block-4 #footer #footer-item-copyright a,
 .region-content #block-block-4 #footer #footer-item-siteby a {
   color: #973141;
   text-decoration: none;
 }
-/* line 707, ../sass/style.scss */
+/* line 788, ../sass/style.scss */
 .region-content #block-block-4 #footer #footer-item-email,
 .region-content #block-block-4 #footer #footer-item-copyright {
   opacity: 1;
@@ -711,7 +813,7 @@ Spotify/Youtube Blocks
 Mean Menu
 ======================================================================================
 */
-/* line 725, ../sass/style.scss */
+/* line 806, ../sass/style.scss */
 .mean-bar {
   background: transparent !important;
   z-index: 5 !important;
@@ -722,24 +824,25 @@ Mean Menu
 Music Block
 ======================================================================================
 */
-/* line 736, ../sass/style.scss */
+/* line 817, ../sass/style.scss */
 h1 {
   text-transform: uppercase;
   font-family: 'BioRhyme', serif;
   color: #ffebac;
-  font-weight: 700;
+  font-weight: 400;
   width: 100%;
   font-size: 36px;
   text-align: center;
+  transition: all 200ms ease;
 }
 
-/* line 747, ../sass/style.scss */
+/* line 830, ../sass/style.scss */
 #main {
   position: relative;
 }
-/* line 751, ../sass/style.scss */
+/* line 834, ../sass/style.scss */
 #main:after {
-  background: url("../images/tileable-wood-colored.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/tileable-wood-colored.png");
   background-color: #331b08;
   content: "";
   display: block;
@@ -749,20 +852,20 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.9;
+  opacity: 1;
 }
-/* line 767, ../sass/style.scss */
+/* line 850, ../sass/style.scss */
 #main .region-content .field-name-field-description {
   text-align: center;
   color: #fff6d8;
   width: 50%;
   height: auto;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   padding: 20px;
 }
-/* line 777, ../sass/style.scss */
+/* line 860, ../sass/style.scss */
 #main .region-content .field-name-field-description:before, #main .region-content .field-name-field-description:after {
   content: "";
   height: 2px;
@@ -770,16 +873,42 @@ h1 {
   display: block;
   margin: 15px 0px;
 }
-/* line 786, ../sass/style.scss */
+/* line 869, ../sass/style.scss */
 #main .region-content #block-views-music-block {
-  width: 80%;
+  width: 900px;
   margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
 }
-/* line 790, ../sass/style.scss */
+@media screen and (max-width: 900px) {
+  /* line 869, ../sass/style.scss */
+  #main .region-content #block-views-music-block {
+    width: 100%;
+  }
+}
+/* line 882, ../sass/style.scss */
+#main .region-content #block-views-music-block .view-content::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 892, ../sass/style.scss */
 #main .region-content #block-views-music-block .views-row {
   width: 50%;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
 }
-/* line 795, ../sass/style.scss */
+@media screen and (max-width: 900px) {
+  /* line 892, ../sass/style.scss */
+  #main .region-content #block-views-music-block .views-row {
+    width: 100%;
+  }
+}
+/* line 904, ../sass/style.scss */
 #main .region-content #block-views-music-block .views-row .views-field-field-album-art img {
   border: 2px solid #ffebac;
   box-sizing: border-box;
@@ -789,12 +918,171 @@ h1 {
   -moz-box-shadow: 0px 5px 27px 0px black;
   box-shadow: 0px 5px 27px 0px black;
 }
-/* line 808, ../sass/style.scss */
+/* line 915, ../sass/style.scss */
+#main .region-content #block-views-music-block .views-row .views-field-title {
+  text-align: center;
+}
+/* line 918, ../sass/style.scss */
 #main .region-content #block-views-music-block .views-row .views-field-title a {
   text-decoration: none;
   color: #ffebac;
   font-family: 'BioRhyme', serif;
   font-weight: 200;
   font-size: 24px;
+  display: block;
+  padding: 30px 0px;
   text-transform: uppercase;
+}
+
+/*
+======================================================================================
+Node Music Pages
+======================================================================================
+*/
+/* line 942, ../sass/style.scss */
+.node-type-music #block-system-main {
+  width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 900px) {
+  /* line 942, ../sass/style.scss */
+  .node-type-music #block-system-main {
+    width: 100%;
+  }
+}
+/* line 954, ../sass/style.scss */
+.node-type-music #block-system-main .content::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 962, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-music-description {
+  width: 100%;
+  float: left;
+  color: #fff6d8;
+  padding: 20px 0px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 25px;
+  font-size: 18px;
+}
+/* line 974, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-date-of-release {
+  width: 100%;
+  float: left;
+}
+/* line 979, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-album-art {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 900px) {
+  /* line 979, ../sass/style.scss */
+  .node-type-music #block-system-main .content .field-name-field-album-art {
+    width: 100%;
+  }
+}
+/* line 990, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-songs-lyrics {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 900px) {
+  /* line 990, ../sass/style.scss */
+  .node-type-music #block-system-main .content .field-name-field-songs-lyrics {
+    width: 100%;
+  }
+}
+/* line 1000, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-songs-lyrics .ui-widget-content {
+  background: transparent;
+  border: none;
+  padding: 10px;
+}
+/* line 1006, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-songs-lyrics h3 {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffebac;
+  font-family: 'BioRhyme', serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding: 10px 0px 10px 2.2em;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+/* line 1019, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-songs-lyrics h3 a {
+  color: #ffebac;
+}
+/* line 1024, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-songs-lyrics p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff6d8;
+}
+/* line 1031, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-photos {
+  width: 100%;
+  float: left;
+  padding: 20px 0px;
+  box-sizing: border-box;
+}
+/* line 1040, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-photos .field-items::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/* line 1049, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-photos .field-items .field-item {
+  width: 25%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 900px) {
+  /* line 1049, ../sass/style.scss */
+  .node-type-music #block-system-main .content .field-name-field-photos .field-items .field-item {
+    width: 50%;
+  }
+}
+/* line 1063, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-videos {
+  width: 100%;
+  float: left;
+  padding: 20px 0px;
+  box-sizing: border-box;
+}
+/* line 1069, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-videos .field-item {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  /* line 1069, ../sass/style.scss */
+  .node-type-music #block-system-main .content .field-name-field-videos .field-item {
+    width: 100%;
+  }
+}
+/* line 1079, ../sass/style.scss */
+.node-type-music #block-system-main .content .field-name-field-videos .field-item iframe {
+  width: 100%;
 }

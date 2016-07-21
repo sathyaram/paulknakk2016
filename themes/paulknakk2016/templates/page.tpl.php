@@ -9,7 +9,7 @@
 ?>
 <head>
 <link href='https://fonts.googleapis.com/css?family=BioRhyme:400,800,300,700,200' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -50,14 +50,18 @@
         </nav>
       <?php endif; ?>
       <div id="social-media-menu">
+        <div id="social-row-1">
         <a href="https://www.facebook.com/PaulKnakkMusic/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a href="https://twitter.com/paulknakk" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/paulknakk/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         <a href="https://www.youtube.com/user/paulieknakkmusic" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+        <div id="social-row-2">
         <a href="https://itunes.apple.com/us/album/rebel-with-a-cause/id1115821182" target="_blank"><i class="fa fa-apple" aria-hidden="true"></i></a>
         <a href="https://play.spotify.com/album/04Xuyw420M3SRCSzA6K529" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
         <a href="https://play.google.com/store/music/album/Paul_Knakk_Rebel_With_a_Cause?id=Bipsrcxg5jhg4v6yckhvptijfty&hl=en" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
         <a href="https://www.amazon.com/gp/product/B01FXC6ITG/ref=dm_ws_sp_ps_dp" target="_blank"><i class="fa fa-amazon" aria-hidden="true"></i></a>
+        </div>
       </div>
 
       <?php print render($page['header']); ?>
