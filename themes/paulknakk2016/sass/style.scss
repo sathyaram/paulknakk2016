@@ -125,6 +125,13 @@ a.more-button {
 
 }
 
+.page-contact h1#page-title{
+
+			@media screen and (max-width: $medium-layout) {
+				padding-top:130px;
+			}
+	}
+
 .node-type-news {
 
 	h1#page-title {
@@ -238,7 +245,7 @@ Page
     background-size: cover;
     background-position: top center;
     height: 900px;
-        background-attachment: fixed;
+    
 }
 
 
@@ -1345,7 +1352,7 @@ h1 {
 	    background-size: cover;
 	    background-position:top left;
 	    width:100vw;
-	    height:100vh;
+	    height:auto;
 }
 
 .node-type-music #main,
