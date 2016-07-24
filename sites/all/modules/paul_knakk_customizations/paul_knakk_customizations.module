@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Paul Knakk Customizations feature.
+ */
+
+include_once 'paul_knakk_customizations.features.inc';
