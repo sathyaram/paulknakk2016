@@ -52,5 +52,5 @@ $nolabel = array_map('trim', explode(',', $block->hide_labels));
   </div>
 <?php endforeach; ?>
 </div>
-<a class="more-button" href="https://google.com">More Tour Dates</a>
+<a class="more-button" href="http://paulknakk.com/shows">More Tour Dates</a>
 </div>

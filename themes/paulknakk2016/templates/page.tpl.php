@@ -10,6 +10,7 @@
 <head>
 <link href='https://fonts.googleapis.com/css?family=BioRhyme:400,800,300,700,200' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width" />
 </head>
 
 

@@ -250,8 +250,7 @@ Page
 
 
 body {
-	width: 100vw;
-    height: 100vh;
+
 }
 
 
@@ -716,6 +715,10 @@ Spotify/Youtube Blocks
 	    background-size: cover;
 	    background-position:center;
 
+	    @media screen and (max-width: $phone-layout) {
+				height:800px;
+			}
+
 	    @media screen and (max-width: $tablet-layout) {
 			width:100%;
 		}
@@ -724,6 +727,10 @@ Spotify/Youtube Blocks
 			display:table;
 			height:600px;
 			margin: 0 auto;
+
+			@media screen and (max-width: $phone-layout) {
+				height:800px;
+			}
 		}
 
 		.agenda-block {
@@ -1630,6 +1637,15 @@ Node Music Pages
     				padding:10px 0px 10px 2.2em;
     				box-sizing:border-box;
     				margin-bottom:20px;
+    				-webkit-transition: all 300ms ease;
+						-moz-transition: all 300ms ease;
+						-ms-transition: all 300ms ease;
+						-o-transition: all 300ms ease;
+						transition: all 300ms ease;
+
+    				&:hover {
+				background: rgba(255,246,216,0.3);
+			}
 
     				a  {
     					color:$gold;
