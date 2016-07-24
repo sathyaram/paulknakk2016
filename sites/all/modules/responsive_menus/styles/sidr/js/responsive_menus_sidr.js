@@ -3,6 +3,18 @@
  * Integrate Sidr library with Responsive Menus.
  */
 (function ($) {
+
+  $(window).on('scroll',function(){
+
+    if($(window).scrollTop() > 100){
+      $('#header').addClass('small');
+      $('#header').addClass('small');
+    } else {
+      $('#header').removeClass('small');
+    }
+
+  });
+
   /**
    * Preparation for each element Sidr will affect.
    */

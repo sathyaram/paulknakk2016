@@ -3,6 +3,18 @@
  * Integrate Mean Menu library with Responsive Menus module.
  */
 (function ($) {
+
+  $(window).on('scroll',function(){
+
+    if($(window).scrollTop() > 100){
+      $('#header').addClass('small');
+      $('#header').addClass('small');
+    } else {
+      $('#header').removeClass('small');
+    }
+
+  });
+
   Drupal.behaviors.responsive_menus_mean_menu = {
     attach: function (context, settings) {
       settings.responsive_menus = settings.responsive_menus || {};
