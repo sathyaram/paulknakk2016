@@ -48,9 +48,7 @@ table {
 	display: none;
 }
 
-.not-front h1#page-title{
-	padding-top:120px;
-}
+
 
 img {
 	width:100%;
@@ -119,7 +117,22 @@ a.more-button {
 	margin:0;
 }
 
+.not-front h1#page-title{
+	padding-top:120px;
+	@media screen and (max-width: $medium-layout) { 
+		padding-top:40px;
+	}
 
+}
+
+.node-type-news {
+
+	h1#page-title {
+	@media screen and (max-width: $medium-layout) { 
+		padding-top:140px;
+	}
+}
+}
 
 /*
 ======================================================================================
@@ -260,14 +273,19 @@ Contact Form
 		}
 
 		.content {
-			
 			margin: 0 auto;
+
+			.form-item, .form-actions {
+				margin:30px 0px;
+			}
 
 			label {
 				color:$gold;
 				font-family: 'BioRhyme', serif; 
 				font-weight:300;
 				padding-right:20px;
+				padding-bottom:10px;
+				text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
 
 				@media screen and (max-width: $phone-layout) {
 					padding:0;
@@ -286,11 +304,11 @@ Contact Form
 				border: none;
     			font-family: 'BioRhyme', serif;
     			text-transform: uppercase;
-    			color:$gold;
+    			color:#1a1a1a;
     			font-weight:200;
     			letter-spacing: 1px;
     			padding:10px 20px;
-    			background-color:#87786c;
+    			background-color:rgb(199,182,167);
     			cursor: pointer;
 
     			@media screen and (max-width: $phone-layout) {
@@ -527,8 +545,10 @@ Menu
 	top:25px;
 	left:20px;
 
+
+
 	@media screen and (max-width: $tablet-layout) {
-		top:15px;
+		top:19px;
 	}
 
 	.menu {
@@ -881,8 +901,9 @@ Spotify/Youtube Blocks
 					border-left: 4px solid $lightgold;
 
 					@media screen and (max-width: $phone-layout) {
-	    				padding: 0 0 0 20px;
+	    				padding:0px;
 	    				width:100%;
+	    				border:none;
 	    			}
 
 				}
@@ -1002,6 +1023,13 @@ Spotify/Youtube Blocks
 		width:900px;
 			margin:0 auto;
 			padding:50px 20px;
+
+
+
+			@media screen and (max-width: $tablet-layout) {
+			width:100%;
+				box-sizing:border-box;
+		}
 
 		.views-row {
     		background: transparent;
@@ -1133,6 +1161,9 @@ Spotify/Youtube Blocks
 				border:none;
 				height:30px;
 				color:white;
+				@media screen and (max-width: $phone-layout) {
+					width:100%;
+				}
 			}
 
 			input.webform-submit.button-primary.form-submit {
@@ -1287,26 +1318,39 @@ Music Block
 
 h1 {
 	text-transform: uppercase;
-		font-family: 'BioRhyme', serif;
-		color:$lightgold;
-		font-weight:400;
-		    width: 900px;
-    margin: 0 auto;
-
-		font-size:36px;
-		text-align: center;
-		transition: all 200ms ease;
+	font-family: 'BioRhyme', serif;
+	color:$lightgold;
+	font-weight:400;
+	width: 900px;
+   	margin: 0 auto;
+	font-size:36px;
+	text-align: center;
+	transition: all 200ms ease;
 
 	@media screen and (max-width: $medium-layout) {
 		width: 100%;    
 
 	}		
 
+	@media screen and (max-width: $phone-layout) {
+		font-size:28px;
+	}
+
 
 }
 
+.page-contact #main {
+		background: linear-gradient(rgba(0,0,0, 0.25), rgba(0,0,0, 0.25)), url("../images/rusticpaul.jpg");
+		background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position:top left;
+	    width:100vw;
+	    height:100vh;
+}
+
 .node-type-music #main,
-.page-node-3 #main {
+.page-node-3 #main,
+.node-type-news #main {
 	position: relative;
 
 
@@ -1436,6 +1480,51 @@ h1 {
 			}
 		}
 	}
+}
+
+/*
+======================================================================================
+Node News Pages
+======================================================================================
+*/
+
+.node-type-news {
+	#block-system-main {
+		width:900px;
+		margin: 0 auto;
+		padding: 20px 30px 50px;
+	    box-sizing: border-box;
+
+	    @media screen and (max-width: $medium-layout) {
+					width:100%;
+		}
+
+		.field-name-field-date {
+			width:100%;
+    		color:$gold;
+    		font-family: 'BioRhyme', serif;
+    		font-weight:100;
+    		padding:10px 0px 30px;
+    		margin: 0 auto;
+    		text-align: center;
+		}
+		.field-name-field-body {
+			color:$lightgold;
+    		font-family: 'Lato', sans-serif;
+    		font-weight:300;
+    		line-height: 25px;
+    		font-size:18px;
+    		width:80%;
+    		padding-top:30px;
+    		margin: 0 auto;
+
+    		@media screen and (max-width: $medium-layout) {
+					width:100%;
+		}
+
+    	}
+	}
+
 }
 
 /*
