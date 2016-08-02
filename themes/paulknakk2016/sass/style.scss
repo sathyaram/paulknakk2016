@@ -44,7 +44,7 @@ table {
 	border-spacing: 0;
 }
 
-.front #page-title, .breadcrumbs, .breadcrumb, .not-front #site-slogan, .front .region-highlighted {
+.front #page-title, .breadcrumbs, .breadcrumb, .not-front #site-slogan, .front .region-highlighted, .not-front a.more-button {
 	display: none;
 }
 
@@ -79,6 +79,7 @@ $phone-layout:600px;
 $medium-layout: 900px;
 $galaxys6-layout: 400px;
 $macbook-layout:1400px;
+$monitor-layout:1920px;
 
 
 /*
@@ -119,9 +120,11 @@ a.more-button {
 
 .not-front h1#page-title{
 	padding-top:120px;
+	/*
 	@media screen and (max-width: $medium-layout) { 
 		padding-top:40px;
 	}
+	*/
 
 }
 
@@ -244,13 +247,118 @@ Page
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    height: 900px;
+    height: 1200px;
+
+    @media screen and (max-width: $macbook-layout) { 
+    	height:900px;
+    }
     
 }
 
 
 body {
 
+}
+
+
+/*
+======================================================================================
+Mailing List Form Submit
+======================================================================================
+*/
+
+.page-node-done {
+
+	.webform-confirmation {
+		font-family: 'Lato', sans-serif;
+    	text-transform: uppercase;
+    	color:$gold;
+    	font-weight:300;
+    	font-size:42px;
+    	text-shadow: 2px 2px 11px rgba(0, 0, 0, 1);
+    	width:90%;
+    	margin: 0 auto;
+    	text-align: center;
+    	padding:20px;
+    	letter-spacing: 1px;
+
+    	@media screen and (max-width: $medium-layout) {
+			font-size:24px;
+		}
+    			
+	}
+
+	.links {
+		display:none;
+	}
+}
+
+
+/*
+======================================================================================
+Login Page
+======================================================================================
+*/
+
+.page-user {
+
+	ul.tabs {
+			display: none;
+		}
+
+	#block-system-main {
+		width:505px;
+		height: auto;
+		margin:0 auto;
+		padding:50px 20px;
+		box-sizing:border-box;
+
+		@media screen and (max-width: $phone-layout) {
+			width:100%;
+		}
+
+		label {
+				color:$gold;
+				font-family: 'BioRhyme', serif; 
+				font-weight:300;
+				padding-right:20px;
+				padding-bottom:10px;
+				text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+
+				@media screen and (max-width: $phone-layout) {
+					padding:0;
+					padding-bottom:10px;
+					display:inherit;
+				}
+
+			}
+
+			input {
+				
+			}
+
+			input,textarea {
+
+				border: none;
+    			font-family: 'BioRhyme', serif;
+    			text-transform: uppercase;
+    			color:#1a1a1a;
+    			font-weight:200;
+    			letter-spacing: 1px;
+    			padding:10px 20px;
+    			background-color:rgb(199,182,167);
+    			cursor: pointer;
+
+    			@media screen and (max-width: $phone-layout) {
+    			padding:10px 20px;
+    			box-sizing:border-box;
+    			width:100%;
+    		}
+
+    			
+			}
+
+	}
 }
 
 
@@ -367,6 +475,16 @@ Header
 
 		a {
 			color:$gold !important;
+
+			-webkit-transition: all 300ms ease;
+						-moz-transition: all 300ms ease;
+						-ms-transition: all 300ms ease;
+						-o-transition: all 300ms ease;
+						transition: all 300ms ease;
+
+						&:hover {
+							color:white !important;
+						}
 		}
 
 		@media screen and (max-width: $tablet-layout) { 
@@ -463,6 +581,15 @@ Header
 				a {
 					color:$red;
 					text-decoration:none;
+					-webkit-transition: all 300ms ease;
+						-moz-transition: all 300ms ease;
+						-ms-transition: all 300ms ease;
+						-o-transition: all 300ms ease;
+						transition: all 300ms ease;
+
+						&:hover {
+							color:white !important;
+						}
 				}
 
 			}	
@@ -491,7 +618,7 @@ Header
 
 		h2 {
 			font-family:'Lato', sans-serif;
-			font-weight:300;
+			font-weight:400;
 			text-transform: uppercase;
 			letter-spacing: 7px;
 			font-size:12px;
@@ -1111,7 +1238,6 @@ Spotify/Youtube Blocks
 		background-color: #020202;
 		padding:150px 20px;
 		box-sizing:border-box;
-    	background-attachment: fixed;
 
 
 		h2 {
@@ -1226,7 +1352,7 @@ Spotify/Youtube Blocks
 				text-transform: uppercase;
 				letter-spacing: 1px;
 
-				@media screen and (max-width: 675px) {
+				@media screen and (max-width: 775px) {
 					width:100%;
 					line-height: 25px;
 				}
@@ -1260,6 +1386,7 @@ Mean Menu
 	  	width: 58px !important;
     	height: 50px;
     	position: fixed !important;
+    	z-index:100 !important;
     
 
 	a.meanmenu-reveal {
@@ -1459,6 +1586,15 @@ h1 {
 				float:left;
 				padding:20px;
 				box-sizing:border-box;
+				-webkit-transition: all 300ms ease;
+						-moz-transition: all 300ms ease;
+						-ms-transition: all 300ms ease;
+						-o-transition: all 300ms ease;
+						transition: all 300ms ease;
+
+				&:hover {
+					opacity:0.7;
+				}
 
 				@media screen and (max-width: $medium-layout) {
 					width:100%;

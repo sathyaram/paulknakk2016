@@ -15,7 +15,7 @@ $keys    = array_map('trim', explode(',', $block->display_keys));
 $nolabel = array_map('trim', explode(',', $block->hide_labels));
 ?>
 <div class="agenda-block">
-  <h2>Tour</h2>
+  <h2>Shows</h2>
   <div id ="tour-block">
   <?php foreach ($events as $day): ?>
   <?php
@@ -52,5 +52,5 @@ $nolabel = array_map('trim', explode(',', $block->hide_labels));
   </div>
 <?php endforeach; ?>
 </div>
-<a class="more-button" href="http://paulknakk.com/shows">More Tour Dates</a>
+<a class="more-button" href="http://paulknakk.com/shows">More Dates</a>
 </div>

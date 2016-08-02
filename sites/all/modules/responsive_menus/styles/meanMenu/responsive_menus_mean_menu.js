@@ -6,7 +6,7 @@
 
   $(window).on('scroll',function(){
 
-    if($(window).scrollTop() > 100){
+    if($(window).scrollTop() > 1){
       $('#header').addClass('small');
       $('#header').addClass('small');
     } else {
