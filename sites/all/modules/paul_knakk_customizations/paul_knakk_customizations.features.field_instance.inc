@@ -10,6 +10,76 @@
 function paul_knakk_customizations_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_credits-field_name_of_person'.
+  $field_instances['field_collection_item-field_credits-field_name_of_person'] = array(
+    'bundle' => 'field_credits',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_name_of_person',
+    'label' => 'Name of Person',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_credits-field_title_of_person'.
+  $field_instances['field_collection_item-field_credits-field_title_of_person'] = array(
+    'bundle' => 'field_credits',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_title_of_person',
+    'label' => 'Title of Person',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-music-field_album_art'.
   $field_instances['node-music-field_album_art'] = array(
     'bundle' => 'music',
@@ -24,7 +94,7 @@ function paul_knakk_customizations_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -106,6 +176,49 @@ function paul_knakk_customizations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-music-field_credits'.
+  $field_instances['node-music-field_credits'] = array(
+    'bundle' => 'music',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_credits',
+    'label' => 'Credits',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-music-field_date_of_release'.
   $field_instances['node-music-field_date_of_release'] = array(
     'bundle' => 'music',
@@ -173,7 +286,7 @@ function paul_knakk_customizations_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -279,7 +392,7 @@ function paul_knakk_customizations_field_default_field_instances() {
           'event' => 'click',
         ),
         'type' => 'faqfield_accordion',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -583,16 +696,19 @@ function paul_knakk_customizations_field_default_field_instances() {
   t('Album Art');
   t('Banner Image');
   t('Body');
+  t('Credits');
   t('Date');
   t('Date of Release');
   t('Description');
   t('Main Image');
   t('Music Description');
+  t('Name of Person');
   t('Photos');
   t('Songs/Lyrics');
   t('The date you want your article to be published or the date of the event you want to highlight.');
   t('The main image associated with the news item.');
   t('The news article text.');
+  t('Title of Person');
   t('Videos');
 
   return $field_instances;

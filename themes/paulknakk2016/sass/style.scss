@@ -689,6 +689,7 @@ Menu
 		.leaf {
 			font-size:15px;
 			display:inline-block;
+			font-weight:600;
 
 			a {
 				text-decoration: none;
@@ -1672,6 +1673,11 @@ Node News Pages
 					width:100%;
 		}
 
+		a {
+			text-decoration: none;
+			color:$gold;
+		}
+
     	}
 	}
 
@@ -1874,6 +1880,58 @@ Node Music Pages
 
 
 		    	}
+    		}
+
+    		.field-collection-container {
+    			width:100%;
+    			float:left;
+    			padding: 20px 0px;
+	    		box-sizing: border-box;
+
+	    		.field-name-field-credits {
+
+		    		> .field-items {
+
+		    			&::after {
+	    					visibility: hidden;
+							display: block;
+							font-size: 0;
+							content: " ";
+							clear: both;
+							height: 0;
+	    				}
+
+					    > .field-item {
+					    	padding:10px 0px;
+					    	width:33.3333333333%;
+			    			float:left;
+
+			    			@media screen and (max-width: $medium-layout) {
+								width:50%;
+							}
+
+							@media screen and (max-width: $phone-layout) {
+								width:100%;
+							}
+
+		    			.field-name-field-title-of-person {
+		    				color:$gold;
+		    				font-family:'BioRhyme', serif;
+		    				font-weight:300;
+		    				font-size:20px;
+
+		    			}
+
+		    			.field-name-field-name-of-person {
+		    				color:$lightgold;
+			    			font-family: 'Lato', sans-serif;
+			    			font-weight:300;
+			    			font-size:18px;
+		    			}
+	    			}	
+	    			}
+    			}
+
     		}	
 	    }
 

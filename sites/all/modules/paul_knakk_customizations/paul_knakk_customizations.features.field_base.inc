@@ -73,6 +73,28 @@ function paul_knakk_customizations_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_credits'.
+  $field_bases['field_credits'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_credits',
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'hide_blank_items' => 1,
+      'path' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_date'.
   $field_bases['field_date'] = array(
     'active' => 1,
@@ -191,6 +213,27 @@ function paul_knakk_customizations_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_name_of_person'.
+  $field_bases['field_name_of_person'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_name_of_person',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_photos'.
   $field_bases['field_photos'] = array(
     'active' => 1,
@@ -236,6 +279,27 @@ function paul_knakk_customizations_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'faqfield',
+  );
+
+  // Exported field_base: 'field_title_of_person'.
+  $field_bases['field_title_of_person'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_title_of_person',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_videos'.
