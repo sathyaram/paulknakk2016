@@ -606,7 +606,7 @@ Header
   /* line 619, ../sass/style.scss */
   #header-wrapper #header h2 {
     letter-spacing: 2px;
-    font-size: 13px;
+    font-size: 12px;
     padding: 0px;
   }
 }
@@ -1859,19 +1859,15 @@ Node Music Pages
 /* line 1904, ../sass/style.scss */
 .node-type-music #block-system-main .content .field-collection-container .field-name-field-credits > .field-items > .field-item {
   padding: 10px 0px;
-  width: 33.3333333333%;
+  width: 50%;
+  height: 70px;
   float: left;
-}
-@media screen and (max-width: 900px) {
-  /* line 1904, ../sass/style.scss */
-  .node-type-music #block-system-main .content .field-collection-container .field-name-field-credits > .field-items > .field-item {
-    width: 50%;
-  }
 }
 @media screen and (max-width: 600px) {
   /* line 1904, ../sass/style.scss */
   .node-type-music #block-system-main .content .field-collection-container .field-name-field-credits > .field-items > .field-item {
     width: 100%;
+    height: auto;
   }
 }
 /* line 1917, ../sass/style.scss */
@@ -1887,6 +1883,7 @@ Node Music Pages
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 18px;
+  line-height: 22px;
 }
 
 /*
@@ -1895,62 +1892,70 @@ Media Queries
 ======================================================================================
 */
 @media screen and (max-width: 1200px) {
-  /* line 1966, ../sass/style.scss */
+  /* line 1967, ../sass/style.scss */
   .front #header.small {
     height: 75px;
     background: rgba(51, 27, 8, 0.7);
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
   }
-  /* line 1971, ../sass/style.scss */
+  /* line 1972, ../sass/style.scss */
   .front #header.small h1#site-name {
     font-size: 48px !important;
   }
-  /* line 1974, ../sass/style.scss */
+}
+@media screen and (max-width: 1200px) and (max-width: 1100px) {
+  /* line 1972, ../sass/style.scss */
+  .front #header.small h1#site-name {
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* line 1979, ../sass/style.scss */
   .front #header.small h1#site-name a {
     color: #fff6d8 !important;
   }
-  /* line 1979, ../sass/style.scss */
+  /* line 1984, ../sass/style.scss */
   .front #header.small .menu .leaf a {
     color: #fff6d8;
   }
-  /* line 1983, ../sass/style.scss */
+  /* line 1988, ../sass/style.scss */
   .front #header.small #social-media-menu .fa {
     color: #fff6d8;
   }
-  /* line 1988, ../sass/style.scss */
+  /* line 1993, ../sass/style.scss */
   .front #header.small h2 {
     color: #fff6d8 !important;
   }
 
-  /* line 1996, ../sass/style.scss */
+  /* line 2001, ../sass/style.scss */
   .mean-bar span {
     background-color: white !important;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 2007, ../sass/style.scss */
+  /* line 2012, ../sass/style.scss */
   .front #header.small {
     height: 75px;
     background: rgba(51, 27, 8, 0.7);
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
   }
-  /* line 2012, ../sass/style.scss */
+  /* line 2017, ../sass/style.scss */
   .front #header.small h1#site-name {
     font-size: 48px !important;
   }
-  /* line 2015, ../sass/style.scss */
+  /* line 2020, ../sass/style.scss */
   .front #header.small h1#site-name a {
     color: #fff6d8 !important;
   }
-  /* line 2020, ../sass/style.scss */
+  /* line 2025, ../sass/style.scss */
   .front #header.small .menu .leaf a {
     color: #fff6d8;
   }
-  /* line 2024, ../sass/style.scss */
+  /* line 2029, ../sass/style.scss */
   .front #header.small #social-media-menu .fa {
     color: #fff6d8;
   }
-  /* line 2029, ../sass/style.scss */
+  /* line 2034, ../sass/style.scss */
   .front #header.small h2 {
     color: #fff6d8 !important;
   }

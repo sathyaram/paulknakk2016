@@ -628,7 +628,7 @@ Header
 
 			@media screen and (max-width: $tablet-layout) {
 				letter-spacing: 2px;
-				font-size:13px;
+				font-size:12px;
 				padding:0px;
 			}
 
@@ -1903,15 +1903,15 @@ Node Music Pages
 
 					    > .field-item {
 					    	padding:10px 0px;
-					    	width:33.3333333333%;
+					    	width:50%;
+					    	height:70px;
 			    			float:left;
 
-			    			@media screen and (max-width: $medium-layout) {
-								width:50%;
-							}
+			    		
 
 							@media screen and (max-width: $phone-layout) {
 								width:100%;
+								height:auto;
 							}
 
 		    			.field-name-field-title-of-person {
@@ -1927,6 +1927,7 @@ Node Music Pages
 			    			font-family: 'Lato', sans-serif;
 			    			font-weight:300;
 			    			font-size:18px;
+			    			line-height:22px;
 		    			}
 	    			}	
 	    			}
@@ -1970,6 +1971,10 @@ Media Queries
 
 			h1#site-name {
 				font-size:48px !important;
+
+				@media screen and (max-width: 1100px) {
+					font-size: 32px !important;
+				}
 
 				a {
 					color: $lightgold !important;
